@@ -1,12 +1,12 @@
 {
-  "name": "aPulse",
+  "name": "aiXplain Status",
   "version": "1.0.0",
   "type": "module",
-  "description": "A one-file NodeJS server status monitoring/notification tool.",
-  "main": "watcher.js",
+  "description": "aiXplain Status is a service health monitoring tool.",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node watcher.js"
+    "start": "node index.js"
   },
   "author": "ybouane",
   "license": "Apache-2.0",

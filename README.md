@@ -13,7 +13,7 @@ Visit https://apulse.ybouane.com for a demo!
 - Check content for validity, HTTP status...
 - Measures latency
 - Minimal and easy to use dashboard
-- Easy to setup. Run the watcher.js script and open the static/index.html page to view the dashboard.
+- Easy to setup. Run the index.js script and open the static/index.html page to view the dashboard.
 - Auto-reload of the config file (no need to restart the watcher)
 - No dependencies
 
@@ -67,19 +67,19 @@ Clone the repo:
 git clone https://github.com/ybouane/aPulse.git
 ```
 
-Either run the watcher.js script directly (you need to keep it running in the background)
+Either run the index.js script directly (you need to keep it running in the background)
 ```shell
 cd aPulse
 ```
 ```shell
-node watcher.js
+node index.js
 ```
 
 Or use a tool like PM2 (prefered method):
 ```shell
 npm install pm2 -g
 ```
-Start watcher.json
+Start pm2.json
 ```shell
 pm2 start pm2.json
 ```
@@ -93,7 +93,7 @@ pm2 save
 ```
 
 ### Serving the status page
-The `watcher.js` script only takes care of running the status checks and updates the `status.json` file in the `static/` folder. If you want to view the final result, you simply need to serve the files in the `static/` folder. You can use Nginx with a config like:
+The `index.js` script only takes care of running the status checks and updates the `status.json` file in the `static/` folder. If you want to view the final result, you simply need to serve the files in the `static/` folder. You can use Nginx with a config like:
 ```nginx
 # Pulse
 server {

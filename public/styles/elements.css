@@ -1,0 +1,50 @@
+/* Style: Application > Base > Elements (Main) */
+* {
+	box-sizing: border-box;
+	&:before, &:after {
+		box-sizing: inherit;
+	}
+}
+html, body {
+	background-color: var(--background-alternative-color) !important;
+}
+body {
+	overflow-x: hidden;
+	overscroll-behavior-y: none;
+	margin: 0;
+	cursor: default;
+}
+a, button {
+	cursor: pointer;
+}
+br {
+	user-select: none;
+}
+img {
+	user-select: none;
+	vertical-align: top;
+}
+svg {
+	pointer-events: none;
+	user-select: none;
+}
+textarea {
+	font-family: inherit;
+	resize: none;
+}
+ol {
+	list-style: decimal;
+	list-style-position: inside;
+}
+code {
+	display: inline-block;
+}
+mark {
+	background-color: transparent;
+}
+form {
+	&[disabled] {
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+}

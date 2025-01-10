@@ -1,0 +1,26 @@
+/* Style: Application > Base > Scale (Main) */
+:root {
+	font-size: 20px;
+}
+
+/* Style: Application > Base > Scale (Responsive) */
+@media (max-width: 767.98px) {
+	:root {
+		font-size: 20px;
+	}
+}
+@media (max-width: 639.98px) {
+	:root {
+		font-size: 18px;
+	}
+}
+@media (max-width: 479.98px) {
+	:root {
+		font-size: 20px;
+	}
+}
+@media (max-width: 319.98px) {
+	:root {
+		font-size: 18px;
+	}
+}

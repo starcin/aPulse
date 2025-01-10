@@ -1,6 +1,6 @@
 {
 	"apps": [{
-		"name"			: "aPulse",
-		"script"		: "./watcher.js"
+		"name"			: "aiXplain Status",
+		"script"		: "./index.js"
 	}]
 }

@@ -1,4 +1,4 @@
-static/status.json
+public/data/status.json
 # Logs
 logs
 *.log
