@@ -1,5 +1,5 @@
 export default {
-	interval			: 15, // Interval in minutes between each pulse
+	interval			: 1, // Interval in minutes between each pulse
 	nDataPoints			: 90, // Number of datapoints to display on the dashboard
 	responseTimeGood	: 300, // In milliseconds, this and below will be green
 	responseTimeWarning	: 600, // In milliseconds, above this will be red
@@ -33,21 +33,97 @@ export default {
 	consecutiveHighLatencyNotify	: 3, // After how many consecutive High latency events should we send a notification
 	sites				: [ // List of sites to monitor
 		{
-			id				: 'google', // optional
-			name			: 'Google',
-			endpoints		: [ // Each site is a bunch of endpoints that can be tested
+			id				: 'studio',
+			name			: 'Studio',
+			endpoints		: [
 				{
-					id				: 'homepage', // optional
-					name			: 'Homepage', // optional
-					link			: 'https://www.google.com', // optional, for notifications and dashboard only, [defaults to endpoint.url], can be disabled by setting it to false
-					url				: 'https://www.google.com', // required
-					request			: { // optional, fetch options
+					id				: 'landing',
+					name			: 'Landing',
+					link			: false,
+					url				: 'https://platform.aixplain.com',
+					request			: {
 						method: 'GET',
 					},
-					mustFind		: 'Feeling Lucky', // optional, String | Array | Regex | Function | AsyncFunction
-					mustNotFind		: /Page not found/i, // optional, String | Array | Regex | Function | AsyncFunction
-					customCheck		: async (content, response)=>{return true;}, // optional, Function | AsyncFunction -> Run your own custom checks return false in case of errors
-					validStatus		: [200], // optional, Which http status should be considered non errors [defaults to 200-299]
+				}
+			]
+		},
+		{
+			id				: 'bel-esprit',
+			name			: 'Bel Esprit',
+			endpoints		: [
+				{
+					id				: 'landing',
+					name			: 'Landing',
+					link			: false,
+					url				: 'https://belesprit.aixplain.com',
+					request			: {
+						method: 'GET',
+					},
+				}
+			]
+		},
+		{
+			id				: 'agent-ui',
+			name			: 'Agent UI',
+			endpoints		: [
+				{
+					id				: 'landing',
+					name			: 'Landing',
+					link			: false,
+					url				: 'https://agent.aixplain.com',
+					request			: {
+						method: 'GET',
+					},
+				}
+			]
+		},
+		{
+			id				: 'docs',
+			name			: 'Docs',
+			endpoints		: [
+				{
+					id				: 'landing',
+					name			: 'Landing',
+					link			: false,
+					url				: 'https://docs.aixplain.com',
+					request			: {
+						method: 'GET',
+					},
+				}
+			]
+		},
+		{
+			id				: 'authentication',
+			name			: 'Authentication',
+			endpoints		: [
+				{
+					id				: 'landing',
+					name			: 'Landing',
+					link			: false,
+					url				: 'https://auth.aixplain.com',
+					request			: {
+						method: 'GET',
+					},
+				}
+			]
+		},
+		{
+			id				: 'models',
+			name			: 'Models',
+			endpoints		: [
+				{
+					id				: '60ddefae8d38c51c5885eff7',
+					name			: 'Translate from English to German on AWS',
+					link			: false,
+					url				: 'https://dev-models.aixplain.com/api/v1/execute/60ddefae8d38c51c5885eff7',
+					request			: {
+						method: 'POST',
+						body: JSON.stringify({"text": "hi"}),
+						headers: {
+							"x-api-key": "83e2d8f5007e80a7c8900fdac7562ac2af6aa4447ac4276dd64ccd439bbe7ae0",
+							"Content-Type": "application/json"
+						}
+					},
 				}
 			]
 		}

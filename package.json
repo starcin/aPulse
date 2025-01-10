@@ -9,5 +9,8 @@
     "start": "node watcher.js"
   },
   "author": "ybouane",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
 }
